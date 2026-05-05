@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0e1a;
+    color: #e2e8f0;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+}
+
+@layer components {
+  .kite-card {
+    @apply bg-kite-card border border-kite-border rounded-xl p-4;
+  }
+
+  .kite-btn-primary {
+    @apply bg-kite-accent hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-200 text-sm;
+  }
+
+  .kite-btn-buy {
+    @apply bg-kite-green hover:bg-green-600 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-200 text-sm;
+  }
+
+  .kite-btn-sell {
+    @apply bg-kite-red hover:bg-red-600 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-200 text-sm;
+  }
+
+  .kite-input {
+    @apply bg-kite-surface border border-kite-border rounded-lg px-3 py-2 text-kite-text text-sm focus:outline-none focus:border-kite-accent transition-colors;
+  }
+
+  .price-up {
+    @apply text-kite-green;
+  }
+
+  .price-down {
+    @apply text-kite-red;
+  }
+
+  .badge-up {
+    @apply bg-green-500/10 text-kite-green text-xs font-mono px-1.5 py-0.5 rounded;
+  }
+
+  .badge-down {
+    @apply bg-red-500/10 text-kite-red text-xs font-mono px-1.5 py-0.5 rounded;
+  }
+}
+
+/* TradingView chart container */
+.tv-chart-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Flash animations on price update */
+.flash-green {
+  animation: flashGreen 0.6s ease-out;
+}
+
+.flash-red {
+  animation: flashRed 0.6s ease-out;
+}
+
+@keyframes flashGreen {
+  0% { background-color: rgba(34, 197, 94, 0.25); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flashRed {
+  0% { background-color: rgba(239, 68, 68, 0.25); }
+  100% { background-color: transparent; }
+}
+
+/* Skeleton shimmer */
+.skeleton {
+  background: linear-gradient(90deg, #111827 25%, #1e293b 50%, #111827 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
