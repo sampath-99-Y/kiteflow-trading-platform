@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 
 const SocketContext = createContext(null);
 
-const BACKEND_URL = "http://localhost:5000";
+const BACKEND_URL = "https://kiteflow-backend.onrender.com";
 
 export function SocketProvider({ children }) {
   const [connected, setConnected] = useState(false);

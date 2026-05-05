@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 
-const BACKEND = "http://localhost:5000";
+const BACKEND = "https://kiteflow-backend.onrender.com";
 
 export default function AIPrediction({ symbol }) {
   const [data, setData] = useState(null);

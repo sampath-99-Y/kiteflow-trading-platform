@@ -3,7 +3,7 @@ import { createChart } from "lightweight-charts";
 import axios from "axios";
 import { useSocket } from "../context/SocketContext";
 
-const BACKEND = "http://localhost:5000";
+const BACKEND = "https://kiteflow-backend.onrender.com";
 
 export default function Chart({ symbol }) {
   const containerRef = useRef(null);

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 import { useSocket } from "../context/SocketContext";
 
-const BACKEND = "http://localhost:5000";
+const BACKEND = "https://kiteflow-backend.onrender.com";
 
 export default function OrderPanel({ symbol, onOrderPlaced }) {
   const { stocks } = useSocket();

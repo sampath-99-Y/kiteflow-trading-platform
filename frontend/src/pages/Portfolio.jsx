@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 
-const BACKEND = "http://localhost:5000";
+const BACKEND = "https://kiteflow-backend.onrender.com";
 
 function StatCard({ label, value, sub, color }) {
   return (
